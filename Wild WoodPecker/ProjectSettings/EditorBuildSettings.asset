@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: adebdb2cbf9f9504184b2973a1b4162d
+  - enabled: 1
+    path: Assets/Scenes/Easy.unity
+    guid: 6155752d299042645a75c020d0b8ad25
+  - enabled: 1
     path: Assets/Scenes/WildWoodPecker.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Hard.unity
+    guid: dc3ffb18a1c67ef4f83c28e9c003bcf2
   m_configObjects: {}

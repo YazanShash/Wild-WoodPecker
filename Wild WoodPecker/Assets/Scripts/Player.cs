@@ -5,7 +5,6 @@ public class Player : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public Sprite[] sprites;
     private int spriteIndex;
-    private float flapTime = 0.5f;
     [Header("Audio")]
     [SerializeField] AudioClip flapSFX;
     [SerializeField] [Range(0, 1)] float flapSFXVolume = 0.2f;
@@ -22,7 +21,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        //InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
+        InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
     }
 
     private void OnEnable()
@@ -38,7 +37,6 @@ public class Player : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) {
             direction = Vector3.up * strength;
             AudioSource.PlayClipAtPoint(flapSFX, Camera.main.transform.position, flapSFXVolume);
-            AnimateSprite();
         }
 
         direction.y += gravity * Time.deltaTime;
@@ -47,7 +45,6 @@ public class Player : MonoBehaviour
 
     private void AnimateSprite()
     {
-        yield return new WaitForSeconds(flapTime);
         {
             spriteIndex++;
 

@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     public float minHeight = -0.5f;
     public float maxHeight = 2.5f;
 
+
     private void OnEnable()
     {
         InvokeRepeating(nameof(Spawn), spawnRate, spawnRate);
