@@ -20,4 +20,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+
+    public void LoadStartScene()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
